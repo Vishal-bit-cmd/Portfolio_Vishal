@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Portfolio</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/3/w3.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+   *{
+    box-sizing: border-box;
+   }
+    body {
+        font-family: 'Times New Roman', Times, serif;
+    }
+  .header {
+  padding: 20px; 
+  text-align: center;
+  background: #1abc9c;
+  color: white;
+}
+.header h1 {
+  font-size: 40px;
+}
+
+.topnav {
+  overflow: hidden;
+  background-color: black;
+}
+
+.topnav a {
+  float: left;
+  display: block;
+  color: rgb(231, 226, 226);
+  text-align: center;
+  padding: 20px 40px;
+  text-decoration: rgb(236, 233, 233);
+  width: 100 px;
+}
+
+.topnav a.right {
+  float: right;
+}
+
+.topnav a:hover {
+  background-color: #1a1919;
+  color: rgb(240, 229, 229);
+}
+
+.topnav a:active {
+  background-color: #f3ebeb;
+  color: rgb(38, 207, 207);
+}
+.row {  
+  display: flex;
+  flex-wrap: wrap;
+}
+.side {
+  flex: 30%;
+  background-color: #f1f1f1;
+  padding: 60px;
+}
+.main {   
+  flex: 70%;
+  background-color: white;
+  padding: 125px;
+}
+.img {
+  background-color: #e9e2e2;
+  width: 100%;
+  padding: 20px;
+}
+.column{
+  float: left;
+  width: 33.33%;
+  padding: 10px;
+  height: 300px;
+}
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.footer {
+  padding: 20px; 
+  text-align: center;
+  background: #0c0c0c;
+}
+@media screen and (max-width: 700px) {
+  .row {   
+    flex-direction: column;
+  }
+}
+@media screen and (max-width: 400px) {
+  .navbar a {
+    float: none;
+    width:100%;
+  }
+}
+    </style> 
+</head>
+<body>
+    <div class="header">
+        <h1>Vishal Surya S K</h1>
+        <p>Trainee - Full Stack Developer</p>
+    </div>
+
+
+    <div class="topnav">
+        <a href="#" class="active">About Me</a>
+        <a href="#">Skills and Certifications</a>
+        <a href="#">My Projects</a>
+        <a href="#" class="right">Contact</a>
+    </div>
+
+    <div class="row">
+        <div class = "side">
+          <h2> About Me</h2>
+          <img src="C:\Users\HP\Downloads\psphoto.jpg" alt="psphoto" style=" height: 200px">
+          <p>A dedicated Professional Computer Science graduate with basic knowledge in programming, data analysis, flair for technical problem solving, proven ability to manage IT tasks efficiently, deliver academic & technical support and engage in cross functional roles. 
+            Seeking to apply my technical skills in a dynamic IT support or software development environment
+          </p>
+          <button class="w3-button w3-black w3-padding-large w3-margin-top w3-background-white ">
+          <i class="fa fa-download"></i> Download Resume
+          </button>
+          <h3></h3>
+          <h3 class="content">Contact</h3>
+          <div class="section">
+            <p><i class="fa fa-map-marker fa-fw w3-text-black w3-xxlarge w3-margin-right"></i> Coimbatore, TN, India</p>
+            <p><i class="fa fa-phone fa-fw w3-text-black w3-xxlarge w3-margin-right"></i> Phone: +91 8220918706</p>
+            <p><i class="fa fa-envelope fa-fw w3-text-black w3-xxlarge w3-margin-right"> </i> Email: vishalsuryask@gmail.com</p>
+          </div>
+        </div>
+
+        <div class="main">
+          <h2>Skills and Certifications</h2>
+          <h3>Skills</h3>
+          <p>MySQL</p>
+            <div class="w3-black">
+            <div class="w3-blue" style="height:28px;width:70%"></div>
+          </div>
+          <p>Python</p>
+            <div class="w3-black">
+            <div class="w3-blue" style="height:28px;width:60%"></div>
+            </div>
+          <p>PowerBI</p>
+            <div class="w3-black">
+            <div class="w3-blue" style="height:28px;width:50%"></div> 
+          </div>
+          <h3>Certifications</h3>
+          <div class="column">
+            <div class="content">
+            <img src="C:\Users\HP\Downloads\Data_Science.jpg" alt=" Data_Science" style="width:100%">
+            <p>Data Science Certification-Besant Technologies</p>
+            </div>
+            </div>
+            <div class="column">
+            <div class="content">
+            <img src="C:\Users\HP\Downloads\Digital_Marketing.jpg" alt="Digital_Marketing" style="width:100%">
+            <p>The Fundamentals of Digital Marketing-Google</p>
+            </div>
+            </div>
+            <div class="column">
+            <div class="content">
+            <img src="C:\Users\HP\Downloads\AI_Chatbot.jpg" alt="AI_Chatbot" style="width:100%">
+            <p>AI Chatbots Without Programming-eDX</p>
+            </div>
+            </div>
+        <h2>My Projects</h2>
+        <div class="column">
+          <div class="content">
+            <img src="C:\Users\HP\Downloads\face.jpg" alt="face" style="width:100%">
+        <h3>Face Recognition Attendance System</h3>
+        <p>Developed a facial recognition tool to automate attendance tracking using image processing and Excel integration.</p>
+        <button class="left">Demo</button>
+        <button class="right">Code</button>
+        </div>
+      </div>
+        
+        <div class="column">
+          <div class="content">
+            <img src="C:\Users\HP\Downloads\yogapose.jpg" alt="yogapose" style="width:100%">
+        <h3>Yoga Pose Classification System</h3>
+        <p>Built machine learning model to classify yoga poses and provide real time feedback for user posture correction.</p>
+        <button class="left">Demo</button>
+        <button class="right">Code</button>
+        </div>
+      </div> 
+        
+        <div class="column">
+          <div class="content">
+            <img src="C:\Users\HP\Downloads\Kneeoes.jpg"  alt="Kneeoes" style="width:100%">
+        <h3>Knee Osteoarthritis Prediction System</h3>
+        <p>An AI-powered system for automated detection and severity classification of Knee Osteoarthritis (KOA) using deep learning and computer vision by processing X-ray images.</p>
+        <button class="left">Demo</button>
+        <button class="right">Code</button>
+        </div>
+        </div>  
+      </div>
+         
+
+        <div class="footer" style="width: 100%">
+          <i class="fa fa-facebook-official  w3-white w3-hover-opacity"></i>
+          <i class="fa fa-instagram w3-white w3-hover-opacity"></i>
+          <i class="fa fa-snapchat w3-white w3-hover-opacity"></i>
+          <i class="fa fa-pinterest-p w3-white w3-hover-opacity"></i>
+          <i class="fa fa-twitter w3-white w3-hover-opacity"></i>
+          <i class="fa fa-linkedin w3-white w3-hover-opacity"></i>
+        </div>
+
+</body>
+</html>
