@@ -33,18 +33,32 @@
   background-color: black;
 }
 
-.navbar a {
+.nav {
+  display: flex;         
+  align-items: center;   
+  width: 100%;           
+}
+
+.nav a {
   float: left;
   display: block;
-  color: rgb(231, 226, 226);
+  color: lab(95.32% 2.35 0.82);
   text-align: center;
-  padding: 20px 40px;
-  text-decoration: rgb(236, 233, 233);
+  padding: 14px 20px;
+  text-decoration: rgb(243, 240, 240);
+  transition: all; 
+}
+
+.nav .right{  
+     float: right;
+     margin-left: auto;
+     transition: all;
 }
 
 .navbar a:hover {
-  background-color: #1a1919;
-  color: rgb(240, 229, 229);
+  background-color: #eee9e9;
+  color: rgb(19, 18, 18);
+  transform: scale(1.1);
 }
 
 .row {  
@@ -55,8 +69,46 @@
   flex: 30%;
   background-color: #f1f1f1;
   padding: 60px;
-  margin-bottom: auto;
 }
+
+.profile-photo {
+  height: 200px;
+  display: block;
+  margin: 0 auto 20px;       
+}
+
+.content {
+  text-align: justify;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+.btn-container {
+  margin: 20px 0;
+}
+.btn {
+  display: inline-block;
+  padding: 10px 16px;
+  margin: 5px 5px 0 0;
+  background: #333;
+  color: white;
+  text-decoration: none;
+  border-radius: 6px;
+}
+.btn:hover {
+  background: #555;
+}
+
+.table {
+  margin-top: 15px;
+  width: 100%;
+  border-collapse: collapse;
+}
+.table th, .table td {
+  padding: 8px 12px;
+  border: 1px solid #ddd;
+}
+
 .main {   
   flex: 70%;
   background-color: white;
@@ -67,20 +119,38 @@
   width: 100%;
   padding: 20px;
 }
+.card {
+  width: 250px;
+  padding: 20px;
+  margin: 20px;
+  background: white;
+  border-radius: 15px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  transition: all 0.3s ease-in-out;
+}
+
+.card:hover {
+  transform: translateY(-10px); /* lift up */
+  box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+}
 .footer {
-  padding: 20px; 
+  padding: 20px;
+  font-size: larger; 
   text-align: center;
   background: #0c0c0c;
 }
+
 @media screen and (max-width: 700px) {
   .row {   
     flex-direction: column;
+    transition: all 2s ease-in-out;
   }
 }
 @media screen and (max-width: 400px) {
   .navbar a {
     float: none;
     width:100%;
+    transition: all 2s ease-in-out;
   }
 }
     </style> 
@@ -92,39 +162,44 @@
     </div>
 
   <div class="navbar">
-        <a href="#About Me">About Me</a>
-        <a href="#Skills and Certifications">Skills and Certifications</a>
-        <a href="#My Projects">My Projects</a>
-        <a href="#contact">Contact</a>
+    <nav class="nav">
+        <a class="nav-link-active" href="#About-Me">About Me</a>
+        <a class="nav-link" href="#Skills-and-Certifications">Skills and Certifications</a>
+        <a class="nav-link" href="#My-Projects">My Projects</a>
+        <a class="nav-link right"href="#contact">Contact</a>
+    </nav>
   </div>
-
-  <section id="About Me"></section>
-  <section id="Skills and Certifications"></section>
-  <section id="My Projects"></section>
-  <section id="contact"></section>
 
     <div class="row">
         <div class = "side">
-          <h2 class="section"> About Me</h2>
-          <img src="images\psphoto.jpg" alt="psphoto" style=" height: 200px"><br>
+          <section id="About-Me"> 
+          <h2>About Me</h2>
+          <div class="About-Me">
+          <img src="images\psphoto.jpg" alt="psphoto" style=" height: 200px" class="profile-photo">
+          <div class="content">
           <p>A dedicated Professional Computer Science graduate with basic knowledge in programming, data analysis, flair for technical problem solving, proven ability to manage IT tasks efficiently, deliver academic & technical support and engage in cross functional roles. 
             Seeking to apply my technical skills in a dynamic IT support or software development environment.
           </p>
+          </div>
+          </div>
 
           <div class="btn-container">
-          <a href="C:\Users\HP\Downloads\Vishal Surya S K_Resume-1.pdf"  download alt="Download_Resume" class="fa fa-download">
+          <a href="docs\Vishal Surya S K_Resume-1.pdf"  download alt="Download_Resume" class="fa fa-download">
             <button class="w3-button download-button w3-black w3-padding-large w3-margin-top w3-background-white ">Download Resume</button>
           </a>
-          <a href="C:\Users\HP\Downloads\Vishal Surya S K_Resume-1.pdf"  target="_blank" alt="View_Resume" class="fa fa-eye">
+          <a href="docs\Vishal Surya S K_Resume-1.pdf"  target="_blank" alt="View_Resume" class="fa fa-eye">
             <button class="w3-button view-btn w3-black w3-padding-large w3-margin-top w3-background-white ">View Resume</button>
           </a> 
           </div>
 
+          <div class="content">
           <h2> Qualifications</h2>
           <span class="badge text-bg-primary">SSLC</span>
           <span class="badge text-bg-info">HSC</span>
           <span class="badge text-bg-success">B.Tech IT</span>
+          </div>
 
+          <div class="content">
           <h2>Languages Known</h2>
           <table class="table">
           <thead>
@@ -148,16 +223,22 @@
           </tr>
           </tbody>
           </table>
-          <h2 class="section">Contact</h2>
+          </div>
+          </section>
+          
+          <section id="contact">
+          <h2>Contact</h2>
           <div class="content">
             <p><i class="fa fa-map-marker fa-fw w3-text-black w3-xxlarge w3-margin-right"></i> Coimbatore, TN, India</p>
-            <p><i class="fa fa-phone fa-fw w3-text-black w3-xxlarge w3-margin-right"></i> Phone: +91 8220918706</p>
-            <p><i class="fa fa-envelope fa-fw w3-text-black w3-xxlarge w3-margin-right"> </i> Email: vishalsuryask@gmail.com</p>
+            <p><i class="fa fa-phone fa-fw w3-text-black w3-xxlarge w3-margin-right"></i>+91 8220918706</p>
+            <p><i class="fa fa-envelope fa-fw w3-text-black w3-xxlarge w3-margin-right"> </i>vishalsuryask@gmail.com</p>
           </div>
         </div>
+      </section>
 
         <div class="main">
-          <h2 class="section">Skills and Certifications</h2>
+          <section id="Skills-and-Certifications">
+          <h2>Skills and Certifications</h2>
           <h3>Skills</h3>
           <p>MySQL</p>
             <div class="w3-black">
@@ -192,8 +273,10 @@
             </div>
             </div>
           </div>
+          </section>
 
-        <h2 class="section">My Projects</h2>
+        <section id="My-Projects">
+        <h2>My Projects</h2>
         <div class="card-group">
             <div class="card">
             <img src="images\face.jpg" class="card-img-top" alt="face" style="width:100%">
@@ -226,6 +309,7 @@
         </div>  
       </div>
     </div>
+  </section>
          
     <div class="footer">
           <i class="fa fa-facebook-official  w3-white w3-hover-opacity"></i>
